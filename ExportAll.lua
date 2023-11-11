@@ -9,7 +9,7 @@ local pluginButton = toolbar:CreateButton(
 
 local function EnumerateChildren(Object)
 	for i, v in pairs(Object) do
-		if v:IsA("MeshPart") or v:IsA("Part") or v:IsA("TrussPart") or v:IsA("WedgePart") or v:IsA("CornerWedgePart") then
+		if v:IsA("MeshPart") or v:IsA("Part") or v:IsA("TrussPart") or v:IsA("WedgePart") or v:IsA("CornerWedgePart") or v:IsA("UnionOperation") then
 			local uniqueid = math.random(1000, 9999)
 			print(tostring(typeof(v)) .. " " .. tostring(v:GetFullName()) .. uniqueid)
 			table.insert(newSelection, v)
