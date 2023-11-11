@@ -23,6 +23,10 @@ local function EnumerateChildren(Object)
 end
 
 pluginButton.Click:Connect(function()
+	print(" ")
+	print("If anything fails to extract or is missing, You can extract it manually.")
+	print("Please make sure to have the parent object selected in order for the script to be functional.")
+	print(" ")
 	local selection = game:GetService("Selection"):Get()
 	EnumerateChildren(selection)
 end)
